@@ -1,21 +1,23 @@
 <script setup>
-import NavbarHero from "../components/LandingPage/NavbarHero.vue";
-import HeroList from "../components/LandingPage/HeroLists.vue";
 import NavbarSection from "../components/LandingPage/NavbarSection.vue";
+import NavbarItems from "../components/LandingPage/NavbarItems.vue";
+import HeroSection from "../components/LandingPage/HeroSection.vue";
 import verifedCompanies from "../components/LandingPage/verifedCompanies.vue";
 import PersonalCard from "../components/LandingPage/PersonalCard.vue";
 import GetGiftCard from "../components/LandingPage/GetGiftCard.vue";
+import ChooseHeartfelt from "../components/LandingPage/ChooseHeartFelt.vue";
 </script>
 
 
 <template>
   <Hearder class="header">
-    <NavbarHero  />
-    <HeroList />
-    <NavbarSection />
+    <NavbarSection  />
+    <NavbarItems />
+    <HeroSection />
     <verifedCompanies />
     <PersonalCard />
     <GetGiftCard />
+    <ChooseHeartfelt />
   </Hearder>
 </template>
 

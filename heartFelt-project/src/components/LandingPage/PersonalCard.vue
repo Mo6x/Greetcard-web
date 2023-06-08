@@ -8,7 +8,7 @@
     <div class="gift-card">
         <div class="gift-card-one">
         <div class="card-detail">
-             <h1>personalise gift card <br>
+             <h1 class="h1">personalise gift card 
             to preference
             </h1>
 
@@ -91,7 +91,7 @@
 .gift-card{
   display: flex;
   flex-direction: column;
-  padding-top: 200px;
+  margin-top: 10%;
   justify-content: space-between;
 }
 
@@ -99,6 +99,8 @@
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
+  margin-right: 10%;
+
 }
 
 .card-detail{
@@ -106,7 +108,10 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-left: 10%;
 }
+
+
 
 .Images-details{
   display: flex;
