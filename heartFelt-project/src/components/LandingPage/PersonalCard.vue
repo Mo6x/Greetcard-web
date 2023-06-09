@@ -8,13 +8,12 @@
     <div class="gift-card">
         <div class="gift-card-one">
         <div class="card-detail">
-             <h1 class="h1">personalise gift card 
+             <h1>personalise gift cards <br>
             to preference
             </h1>
-
-          <p>
-            Tap into the gift bag to share love in the most 
-            amazing way. Change preference to suit that 
+           <p>
+            Tap into the gift bag to share love in the most <br> 
+            amazing way. Change preference to suit that  <br> 
             special one with no extre cost.
           </p>  
           <a v-bind:href="linkUrl">Customise a card</a>
@@ -23,15 +22,21 @@
 
         <div class="Images-details">
             <div class="Img-images">
+              <div class="imges-color">
                 <img src="@/assets/EllipseWine.svg" />
                 <img src="@/assets/RectanglBlue.svg" />
                 <img src="@/assets/EllipseBlue.svg" />
                 <img src="@/assets/Ellipse LightBlue.svg" />
+               </div>
+
                 <img src="@/assets/Gallary.svg" />
+
+
                 <span class="sendimge">
                     <img src="@/assets/sendImge.svg" />
                 </span>
-             </div>
+            </div>
+
               <div class="Icon-details">
                 <img src="@/assets/pencil.svg" />
                 <img src="@/assets/Arrow..svg" />
@@ -58,16 +63,34 @@
         <div class="images-details">
            <div class="images-detail-one">
              <div class="send-modal">
-                <ul>
-                    <li v-for="item in items" :key="item.id">{{ item.name }}</li>
-                  </ul>
+              <a v-bind:href="linkUrl">Recipient (s)</a>
+               <div class="blackArrow">
+                 <img src="@/assets/blackArrow.svg" />
+              </div>
+              <form action="/submit" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="name">Amount:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="name">Delivery:</label>
+                <input type="text" id="name" name="name" required>
+            
+                <input type="submit" value="Submit">
+              </form>
              </div>
              <div class="love-card">
                 <img src="@/assets/piclove.svg" />
                 <button class="button-field">Happy</button>
              </div>
+             <div class="Arrow-1">
              <img src="@/assets/blueArrow.svg" />
              <img src="@/assets/blueArrow.svg" />
+            </div>
         </div>
         <div class="images-aticle">
             <h1>Share to loved ones on <br>
@@ -78,8 +101,10 @@
               amazing way. Change preference to suit that <br>
               special one with no extra cost.  
             </p>
+            <div class="send-link">
             <a v-bind:href="linkUrl">Send a card</a>
             <img src="@/assets/arrow.svg" />
+          </div>
         </div>
     </div> 
     </div>
@@ -91,126 +116,128 @@
 .gift-card{
   display: flex;
   flex-direction: column;
-  margin-top: 10%;
+  margin-top: 20%;
   justify-content: space-between;
 }
 
 .gift-card-one{
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  margin-right: 10%;
-
-}
-
-.card-detail{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
   margin-left: 10%;
+  justify-content: space-between;
 }
 
+.card-detail h1{
+   font-size: 50px;
+}
+
+.card-detail p{
+  width: 500px;
+  color: #6B6B6B;
+  font-size: 25px;
+}
+
+.card-detail a{
+  display: flex;
+ color: #299E9E;
+  font-size: 25px;
+}
 
 
 .Images-details{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 30px;
+  margin-right: 10%;
 }
 
-.Img-images, .Icon-details, .diamon-imge{
+.Img-image{
   display: flex;
-  flex-direction: row;
- width: 33.33%;
-}
-.Img-images img, .Icon-detailsn img, .diamon-imge img {
-  
-display: block;
-  margin-bottom: 10px;
 }
 
-.sendimge{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.Icon-details{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.diamon-imge{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.Face-smile-icon{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.button-field{
-  display: block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: none;
-  background-color: #c4c4c4;
-  color: #fff;
-  cursor: pointer;
-}
 
 .images-details{
   display: flex;
+  margin-top: 10%;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 30px;
 }
 
 .images-detail-one{
+  margin-left: 10%;
+}
+
+.send-modal{
   display: flex;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
+  width: 300px;
+  height: 100px;
+  justify-content: space-between;
 }
 
-.send-modal, .love-card{
-  width: 33.33%;
+.send-modal form{
+  flex: row;
+  padding-bottom: 10%;
 }
 
-.send-modaln ul, .love-card{
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.send-modal a{
+  font-size: 20px;
 }
 
-.love-card img{
-  display: block;
-  margin-bottom: 10px;
-}
-
-.images-details img{
-  display: block;
-  margin-bottom: 20px;
+.send-modal blackArrow{
+ align-items: center;
 }
 
 .images-aticle{
-  text-align: center;
+  margin-right: 10%;
 }
 
 .images-aticle h1{
-  margin: 0;
+     font-size: 50px;
 }
+
+.images-aticle p{
+  width: 500px;
+  font-size: 25px;
+  color: #6B6B6B;
+}
+
+.love-card{
+  height: 500px;
+  width: 350px;
+  margin-left: 70%;
+  border: border-box solid 1px black;
+  border-radius: 5%;
+  background-color: aqua;
+}
+
+.love-card button{
+  display: flex;
+  width: 50%;
+  height: 30px;
+  margin-top: 10%;
+  margin-left: 12%;
+  text-align: center;
+}
+
+ .Arrow-1{
+  margin-left: 50px;
+}
+
+.love-card img{
+  padding-left: 40px;
+  padding-top: 40px;
+ 
+}
+
+.send-link{
+  display: flex;
+  justify-content: baseline
+  }
+
+  .send-link a{
+    font-size: 25px;
+     color: #299E9E;
+  }
+
+  .send-link img{
+    height: 40px;
+   
+  }
 
 /* Responsive Styles */
 

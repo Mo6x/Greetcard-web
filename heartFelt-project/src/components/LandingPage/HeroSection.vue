@@ -6,9 +6,9 @@
 
 <div class="Navbar-section">
      <div class="Navbar-sect">
-         <h1 class="Text">Get digital Gifts <br />Cards at Ease</h1>
-         <div class="eclipse"><img src="@/assets/Vector.png" /></div>
-         <p class="Paragraph">
+         <h1>Get digital Gifts <br />Cards at Ease</h1>
+         <img src="@/assets/Vector.png" />
+         <p>
              Express love to friends and family all over the worlds,
              <br />with special memories of gifts.
          </p>
@@ -39,24 +39,23 @@
 
 .Navbar-sect{
 margin-left: 10%;
-  
 }
 
-.Text{
-  margin: 0;
-  font-size: 60px;
+.Navbar-sect h1{
+font-size: 60px;
 }
-.eclipse img{
-  top: 40px;
-  left: 10px;
-  
-  
- 
-}
+.Navbar-sect img{
+   display: flex;
+   justify-content: end;
+  margin-left: 9%;
+   margin-top: -40%;
+  }
 
-.Paragraph {
-  margin-bottom: 20px;
-}
+ .Navbar-sect p{
+  margin-top: 15%;
+  font-size: 20px;
+  }
+
 
 .Card-button{
   width:30%;
@@ -68,39 +67,49 @@ margin-left: 10%;
 }
 
 .Cards-color{
+  padding-top: 5%;
   display: flex;
   margin-right: 10%;
+  margin-left: -10%;
   overflow: auto;
+  height: 400px;
 }
 
 .Color-green{
   width: 200px;
   height: 250px;
-  right: 10px;
+  align-content: center;
+  margin-right: -10%;
+  margin-left: 15%;
   background-color: #7DD1D3;
-  z-index: 4;
+  z-index: 3;
 }
 
 .Color-red{
   width: 200px;
-  height: 170px;
+  height: 200px;
+  margin-top: -100px;
   background-color: red;
-  z-index: 3;
+  z-index: 2;
 }
 
 .Color-blue {
   width: 200px;
   height: 250px;
+  margin-left: -15%;
   background-color: #1F3C76;
-  z-index: 2;
+  z-index: 1;
 }
 
 .Color-yellow{
   width: 200px;
-  height: 170px;
+  height: 200px;
   bottom: 20px;
+  margin-bottom: -10%;
+  margin-top: 15%;
+  margin-left: -40%;
   background-color: yellow;
-  z-index: 1;
+  z-index: 2;
 }
 
 
